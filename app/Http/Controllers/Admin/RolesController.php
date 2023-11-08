@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Role;
+use App\Models\Permission;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MassDestroyRoleRequest;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StoreRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
-use App\Models\Permission;
-use App\Models\Role;
-use Gate;
-use Illuminate\Http\Request;
+use App\Http\Requests\MassDestroyRoleRequest;
 use Symfony\Component\HttpFoundation\Response;
 
 class RolesController extends Controller
